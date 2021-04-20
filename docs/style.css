@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Shrikhand&display=swap");
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  width: 100%;
+}
+
+header > img, .logo > img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.local {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8d7d7;
+  padding: 1rem 2rem;
+}
+.local h3 {
+  margin-left: 20px;
+}
+
+.reservation {
+  background-color: #f1eeee;
+}
+.reservation p {
+  font-size: 20px;
+  text-align: center;
+}
+.reservation h2 {
+  text-align: center;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.explorer {
+  color: white;
+  background-color: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 20px auto;
+  height: 2rem;
+  width: 50%;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
