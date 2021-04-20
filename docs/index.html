@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./sass/style.css">
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
     <title>Ohmyfood</title>
 </head>
@@ -23,7 +23,7 @@
     <div class="reservation">
         <h2>Réservez le menu qui vous convient</h2>
         <P class="decouverte">Découvrez des restaurants d'exception, séléctionnés par nos soins</P>
-        <button class="explorer">Explorer nos restaurants</button>
+        <button class="explorer"><a href="#">Explorer nos restaurants</a></button>
     </div>
     <div class="fonctionnement">
         <h2>Fonctionnement</h2>
@@ -48,37 +48,39 @@
     <div class="restaurant">
         <h2>Restaurants</h2>
     </div>
-    <div class="carte-1">
+    <div class="cartes">
+    <div class="carte carte-1">
         <a href="lapalette.html">
-        <img src="./images/restaurants/lapalette_des_gouts.jpg" alt="plat de ménilmontant">
+        <img src="./images/restaurants/lapalette_des_gouts.jpg" class="lien-resto" alt="plat de ménilmontant">
         <h3>La palette du goùt</h3>
         <p>Ménilmontant</p>
         <i class="far fa-heart"></i>
-        <p class="nouveau">nouveau</p>
+        <p class="nouveau">Nouveau</p>
     </a>
     </div>
-    <div class="carte-2">
+    <div class="carte carte-2">
         <a href="enchante.html">
-        <img src="./images/restaurants/lanote_enchnante.jpg" alt="plat charonne">
+        <img src="./images/restaurants/lanote_enchnante.jpg" class="lien-resto" alt="plat charonne">
         <h3>La note enchantée</h3>
         <p>Charonne</p>
-        <p class="nouveau">nouveau</p>
+        <p class="nouveau">Nouveau</p>
     </a>
     </div>
-    <div class="carte-3">
+    <div class="carte carte-3">
         <a href="lafrancaise.html">
-        <img src="./images/restaurants/alafrancaise.jpg" alt="plat deux boules blanches">
+        <img src="./images/restaurants/alafrancaise.jpg" class="lien-resto" alt="plat deux boules blanches">
         <h3>À la française</h3>
         <p>Cité Rouge</p>
     </a>
     </div>
-    <div class="carte-4">
+    <div class="carte carte-4">
         <a href="ledelice.html">
-        <img src="./images/restaurants/delice_des_sens.jpg" alt="plat folie-méricourt">
+        <img src="./images/restaurants/delice_des_sens.jpg" class="lien-resto" alt="plat folie-méricourt">
         <h3>Le délice des sens</h3>
         <p>Folie-Méricourt</p>
-    </a>
+        </a>
     </div>
+</div>
     <footer>
         <h3>Ohmyfood</h3>
         <a href="#"><i class="fas fa-utensils"></i>
