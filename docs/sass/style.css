@@ -14,6 +14,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 header {
@@ -99,6 +100,49 @@ h2 {
           align-items: center;
 }
 
+.fonctionnement h2 {
+  padding: 50px 0 20px 20px;
+}
+
+.item {
+  width: 80vw;
+  height: 4rem;
+  margin: 2rem auto;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f1eeee;
+}
+
+.item .liste {
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+  width: 2rem;
+  position: relative;
+  left: -4.5rem;
+}
+
+.item p {
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  margin: 0 0 0 20px;
+  font-size: 15px;
+}
+
+.item:hover {
+  background-color: #dfccf5;
+}
+
+.restaurant h2 {
+  background-color: #f1eeee;
+  padding: 50px 0 20px 20px;
+}
+
 .cartes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,25 +154,29 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #f1eeee;
 }
 
 .carte {
   width: 90vw;
-  height: 350px;
+  height: 280px;
   border-radius: 20px;
   -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 1rem 0;
+  background-color: white;
 }
 
 .carte img {
   width: 100%;
-  height: 150px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
 
-.carte .nouveau {
+.nouveau {
   background-color: #99E2D0;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -136,5 +184,56 @@ h2 {
   padding: 5px;
   color: #088d08;
   font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.fa-heart {
+  display: block;
+  margin: 20px;
+  font-size: 2rem;
+}
+
+.aligner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aligner h3 {
+  font-weight: 900;
+  font-style: normal;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.aligner div {
+  margin-left: 15px;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  padding: 40px 10px;
+}
+
+footer h3 {
+  font-family: shrikhand;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+footer .lien-footer {
+  display: -ms-grid;
+  display: grid;
+}
+
+footer .lien-footer a {
+  color: white;
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */
