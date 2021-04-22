@@ -48,9 +48,9 @@ a{
 footer{
     color: white;
     background-color: black;
-    padding: 40px 10px;
-    height: 200px;
-    h3{
+    padding: 60px 10px;
+    padding-bottom: 80px;
+        h3{
         font-family: shrikhand;
         font-weight: 500;
         letter-spacing: 1px;
@@ -107,6 +107,9 @@ h2{
     font-size:25px;
     font-weight: 900;
 }
+.fa-mobile-alt, .fa-list-ul, .fa-store{
+    color: gray;
+}
 .item{
     @include centrer;
 }
@@ -143,6 +146,9 @@ h2{
     }
     &:hover{
        background-color: mix(white,$couleur-primaire , 70%);
+       .fa-mobile-alt, .fa-list-ul, .fa-store{
+           color: $couleur-primaire;
+       }
     }
     
 }
@@ -184,11 +190,6 @@ h2{
     top:15px;
     right: 15px;    
  }
- .fa-heart{
-     display: block;
-     margin: 20px;
-     font-size:2rem;
- }
  .aligner{
      display: flex;
      justify-content: space-between;
@@ -223,10 +224,6 @@ h2{
                 grid-area:"quatre";
             }
     }
-    .liste-carte{
-       display: flex;
-       max-width: 30vw;
-    }
  }
  @media screen and (min-width:900px){
      .explorer{
@@ -246,7 +243,7 @@ h2{
          margin: 50px auto;
      }
  }
- /*les autre spages*/
+ /*les autres pages*/
  header{
      a{
          position: absolute;
@@ -268,17 +265,14 @@ h2{
     height: 26vh;
     width: 100vw;
     object-fit:cover; 
- ;
+
     
 }
 .carte-principale{
     background-color: $fond-1;
-    border-radius: 20px 20px 0 0;
+    border-radius: 30px 30px 0 0;
     padding-bottom: 70px; 
-    z-index: 1;
-    
-    
-       
+         
 }
 .plat{
     display: inline-block;
@@ -293,25 +287,40 @@ h2{
      h4 ,.prix{
          font-family: sans-serif;
          font-weight: bold;
-    
-     }
-
-
+      }
 }
 .categorie{
     display: inline; 
     border-bottom:4px solid $couleur-tertiaire;
     margin-left: 20px;
     padding-bottom:8px;
-   
-}
+  }
 .titre{
     display: flex;
     justify-content: space-between;
-   
-     h2{
+        h2{
          font-family: shrikhand;
          margin:30px;
          font-size: 35px;
      }
+}
+/*animation coeur*/
+.favoris {
+     position: relative;
+   margin-top: 15px;
+   margin-right: 35px;
+   width: 40px;
+   height: 40px;
+     svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     fill:white;
+    stroke: black;
+    stroke-width: 3px;
+    transition: all .5s ease-in-out;
+   }
+    svg:hover{
+    fill: $couleur-primaire;  
+    }
 }

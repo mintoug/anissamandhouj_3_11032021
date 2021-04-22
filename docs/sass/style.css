@@ -24,8 +24,8 @@ a {
 footer {
   color: white;
   background-color: black;
-  padding: 40px 10px;
-  height: 200px;
+  padding: 60px 10px;
+  padding-bottom: 80px;
 }
 
 footer h3 {
@@ -116,6 +116,10 @@ h2 {
   font-weight: 900;
 }
 
+.fa-mobile-alt, .fa-list-ul, .fa-store {
+  color: gray;
+}
+
 .item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,6 +169,10 @@ h2 {
 
 .item:hover {
   background-color: #dfccf5;
+}
+
+.item:hover .fa-mobile-alt, .item:hover .fa-list-ul, .item:hover .fa-store {
+  color: #9356DC;
 }
 
 .restaurant h2 {
@@ -218,12 +226,6 @@ h2 {
   right: 15px;
 }
 
-.fa-heart {
-  display: block;
-  margin: 20px;
-  font-size: 2rem;
-}
-
 .aligner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -267,12 +269,6 @@ h2 {
   .cartes .carte-4 {
     grid-area: "quatre";
   }
-  .liste-carte {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 30vw;
-  }
 }
 
 @media screen and (min-width: 900px) {
@@ -295,7 +291,7 @@ h2 {
   }
 }
 
-/*les autre spages*/
+/*les autres pages*/
 header a {
   position: absolute;
   top: 30px;
@@ -335,9 +331,8 @@ header a {
 
 .carte-principale {
   background-color: #f1eeee;
-  border-radius: 20px 20px 0 0;
+  border-radius: 30px 30px 0 0;
   padding-bottom: 70px;
-  z-index: 1;
 }
 
 .plat {
@@ -378,5 +373,29 @@ header a {
   font-family: shrikhand;
   margin: 30px;
   font-size: 35px;
+}
+
+/*animation coeur*/
+.favoris {
+  position: relative;
+  margin-top: 15px;
+  margin-right: 35px;
+  width: 40px;
+  height: 40px;
+}
+
+.favoris svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white;
+  stroke: black;
+  stroke-width: 3px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.favoris svg:hover {
+  fill: #9356DC;
 }
 /*# sourceMappingURL=style.css.map */
