@@ -301,6 +301,12 @@ h2 {
   .explorer {
     max-width: 25vw;
   }
+  header > img, .logo > img {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+  }
   footer .lien-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -315,25 +321,26 @@ h2 {
     max-width: 50vw;
     margin: 50px auto;
   }
-  .categorie {
-    position: relative;
-    top: -60px;
-    width: 200px;
-  }
   .plat {
-    max-width: 20vw;
+    display: inline-block;
+    max-width: 25vw;
   }
   .toutes-cartes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .toutes-cartes .carte-dessert a {
+    width: 22vw;
+  }
+  .categorie {
+    position: relative;
+    right: -10vw;
+  }
+  .carte-principale {
+    max-width: 90vw;
+    left: 5vw;
   }
 }
 
@@ -365,7 +372,7 @@ header a {
 }
 
 .image-principale {
-  height: 36vh;
+  height: 30rem;
   width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
@@ -443,10 +450,11 @@ header a {
 }
 
 .categorie {
-  display: inline;
+  display: inline-block;
   border-bottom: 4px solid #99E2D0;
-  margin-left: 40px;
+  margin-left: 20px;
   padding-bottom: 8px;
+  width: 100px;
 }
 
 .titre {

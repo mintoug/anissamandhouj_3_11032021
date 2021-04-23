@@ -156,6 +156,7 @@ h2{
         font-weight:bold;
         margin:  0 0 0 20px ;
         font-size: 20px;
+    
     }
     &:hover{
        background-color: mix(white,$couleur-primaire , 70%);
@@ -234,11 +235,18 @@ h2{
                 grid-area:2/2/3/3;
             }
     }
+    
  }
  @media screen and (min-width:900px){
      .explorer{
          max-width: 25vw;
      }
+     header>img , .logo>img{
+        display: block;
+        width: 30%;
+        margin:0 auto;
+        padding: 20px;
+    }
      footer{
      .lien-footer{
         display: flex;
@@ -252,21 +260,28 @@ h2{
          max-width: 50vw;
          margin: 50px auto;
     }
+    
+    .plat{
+        display: inline-block;
+        max-width: 25vw;
+    }
+       .toutes-cartes{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        .carte-dessert{
+            a{
+                width: 22vw;
+            }
+        }
+    }
     .categorie{
         position: relative;
-        top: -60px;
-        width: 200px;
+        right: -10vw;
     }
-    .plat{
-        max-width: 20vw;
+    .carte-principale{
+        max-width: 90vw;
+        left: 5vw;
     }
-    .toutes-cartes{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
  }
  /*les autres pages*/
  header{
@@ -287,7 +302,7 @@ h2{
     height: 3.5em;
 }
 .image-principale{
-    height: 36vh;
+   height: 30rem;
     width: 100vw;
     object-fit:cover; 
     z-index: 1;
@@ -359,11 +374,11 @@ h2{
 }
 
 .categorie{
-    display: inline; 
+    display: inline-block; 
     border-bottom:4px solid $couleur-tertiaire;
-    margin-left: 40px;
+    margin-left: 20px;
     padding-bottom:8px;
-   
+    width: 100px;
   }
 .titre{
     display: flex;
