@@ -38,6 +38,7 @@ footer {
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
+  margin-top: -2rem;
 }
 
 footer h3 {
@@ -201,6 +202,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   background-color: #f1eeee;
+  padding-bottom: 3rem;
 }
 
 .carte {
@@ -318,6 +320,21 @@ h2 {
     display: -ms-flexbox;
     display: flex;
   }
+  .plat {
+    max-width: 20vw;
+  }
+  .toutes-cartes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 /*les autres pages*/
@@ -401,7 +418,11 @@ header a {
   top: 40px;
 }
 
-.plat .coche {
+.plat .coche .fa-check-circle {
+  visibility: hidden;
+}
+
+.plat .coche:hover {
   position: absolute;
   top: 0;
   right: 0;
@@ -411,13 +432,14 @@ header a {
   border-radius: 0 20px 20px 0;
 }
 
-.plat .fa-check-circle {
+.plat .coche:hover .fa-check-circle {
   display: inline-block;
   color: white;
   font-size: 30px;
   position: absolute;
   top: 25px;
   right: 25px;
+  visibility: visible;
 }
 
 .categorie {
