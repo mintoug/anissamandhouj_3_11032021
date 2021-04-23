@@ -6,6 +6,9 @@ $couleur-secondaire:#FF79DA;
 $couleur-tertiaire:#99E2D0;
 $fond-1:rgb(241, 238, 238);
 $fond-2:rgb(216, 215, 215);
+$font-family-1:Roboto;
+$font-family-2:sans-serif;
+$font-family-logo:shrikhand;
 
 @mixin bouton{
     display: block;
@@ -36,7 +39,7 @@ $fond-2:rgb(216, 215, 215);
     box-sizing: border-box;
 }
 body{
-    font-family: Roboto, sans-serif;
+    font-family: $font-family-1, $font-family-2;
     font-size: 20px;
 }
 a{
@@ -59,7 +62,7 @@ footer{
     position: relative;
     margin-top: -2rem;
     h3{
-        font-family: shrikhand;
+        font-family: $font-family-logo;
         font-weight: 500;
         letter-spacing: 1px;
         padding-left: 20px;
@@ -113,7 +116,7 @@ header>img , .logo>img{
 }
 
 h2{
-    font-family: sans-serif;
+    font-family: $font-family-2;
     font-size:25px;
     font-weight: 900;
 }
@@ -149,7 +152,7 @@ h2{
          left:-15px;
      }
     p{
-        font-family: sans-serif;
+        font-family:$font-family-2;
         font-weight:bold;
         margin:  0 0 0 20px ;
         font-size: 20px;
@@ -160,9 +163,7 @@ h2{
            color: $couleur-primaire;
        }
     }
-    
 }
-
 .restaurant{
     h2{
         background-color: $fond-1;
@@ -251,8 +252,10 @@ h2{
          max-width: 50vw;
          margin: 50px auto;
     }
-     .categorie{
-         display: flex;
+    .categorie{
+        position: relative;
+        top: -60px;
+        width: 200px;
     }
     .plat{
         max-width: 20vw;
@@ -263,6 +266,7 @@ h2{
         align-items: center;
         
     }
+    
  }
  /*les autres pages*/
  header{
@@ -313,7 +317,7 @@ h2{
     padding: 10px;
     position: relative;
      h4 ,.prix{
-         font-family: sans-serif;
+         font-family: $font-family-2;
          font-weight: bold;
       }
      h4 , p{
@@ -365,7 +369,7 @@ h2{
     display: flex;
     justify-content: space-between;
         h2{
-         font-family: shrikhand;
+         font-family: $font-family-logo;
          margin:30px;
          font-size: 30px;
      }
