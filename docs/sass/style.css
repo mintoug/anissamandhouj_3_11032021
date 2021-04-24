@@ -185,6 +185,12 @@ h2 {
   color: #9356DC;
 }
 
+.decouverte {
+  width: 100vw;
+  padding: 0 20px;
+  white-space: normal;
+}
+
 .restaurant h2 {
   background-color: #f1eeee;
   padding: 50px 0 20px 20px;
@@ -328,11 +334,11 @@ h2 {
   .toutes-cartes {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
   .toutes-cartes .carte-dessert a {
-    width: 22vw;
+    width: 24vw;
   }
   .categorie {
     position: relative;
@@ -407,46 +413,26 @@ header a {
   position: relative;
 }
 
-.plat h4, .plat .prix {
+h4, .prix {
   font-family: sans-serif;
   font-weight: bold;
 }
 
-.plat h4, .plat p {
+h4, p {
   width: 70%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.plat .prix {
+.prix {
   position: absolute;
   right: 20px;
   top: 40px;
 }
 
-.plat .coche .fa-check-circle {
+.coche .fa-check-circle {
   visibility: hidden;
-}
-
-.plat .coche:hover {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #99E2D0;
-  width: 80px;
-  height: 5rem;
-  border-radius: 0 20px 20px 0;
-}
-
-.plat .coche:hover .fa-check-circle {
-  display: inline-block;
-  color: white;
-  font-size: 30px;
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  visibility: visible;
 }
 
 .categorie {
@@ -491,6 +477,32 @@ header a {
 }
 
 .favoris svg:hover {
-  fill: #9356DC;
+  fill: url(#MyGradient);
+}
+
+/* case check*/
+.plat:hover .prix {
+  position: absolute;
+  right: 80px;
+}
+
+.plat:hover .coche {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #99E2D0;
+  width: 70px;
+  height: 5rem;
+  border-radius: 0 20px 20px 0;
+}
+
+.plat:hover .fa-check-circle {
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

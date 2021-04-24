@@ -31,6 +31,7 @@ $font-family-logo:shrikhand;
     @return mix(white, $color, $percentage);
   }
 
+
  
 /*général*/
 *,::before,::after{
@@ -165,6 +166,12 @@ h2{
        }
     }
 }
+.decouverte{
+    width: 100vw;
+    padding: 0 20px;
+    white-space:normal;
+    
+}
 .restaurant{
     h2{
         background-color: $fond-1;
@@ -264,13 +271,16 @@ h2{
     .plat{
         display: inline-block;
         max-width: 25vw;
+         
+       
     }
+    
        .toutes-cartes{
         display: grid;
-        grid-template-columns:1fr 1fr 1fr;
+        grid-template-columns:repeat(3, 1fr);
         .carte-dessert{
             a{
-                width: 22vw;
+                width: 24vw;
             }
         }
     }
@@ -330,7 +340,10 @@ h2{
     border-radius: 20px;
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
     padding: 10px;
+   
     position: relative;
+    
+    }
      h4 ,.prix{
          font-family: $font-family-2;
          font-weight: bold;
@@ -345,33 +358,16 @@ h2{
           position:absolute;
           right:20px;
           top:40px;
+         
             
     }
     .coche{
         .fa-check-circle{
             visibility: hidden;
         }
-        &:hover
-          {
-          position: absolute;
-          top: 0;
-          right: 0;
-          background: $couleur-tertiaire;
-          width: 80px;
-          height: 5rem;
-          border-radius: 0 20px 20px 0;
-             .fa-check-circle{
-            display: inline-block;
-            color:white;
-            font-size: 30px;
-            position: absolute;
-            top:25px;
-            right:25px;
-            visibility: visible;
-            }      
-        }
+       
    }
-}
+
 
 .categorie{
     display: inline-block; 
@@ -406,8 +402,35 @@ h2{
 
    }
     svg:hover{
-    fill:$couleur-primaire;
+    fill:url(#MyGradient);
     
     }
 }
-
+/* case check*/
+.plat{
+    &:hover{
+        .prix{
+      position: absolute;
+      right: 80px;
+        }
+        .coche{
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: $couleur-tertiaire;
+          width: 70px;
+          height: 5rem;
+          border-radius: 0 20px 20px 0;
+        }
+        .fa-check-circle{
+          display: inline-block;
+          color:white;
+          font-size: 30px;
+          position: absolute;
+          top:25px;
+          right:25px;
+          visibility: visible;
+          } 
+         
+    }
+}
