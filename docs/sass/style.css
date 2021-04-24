@@ -1,6 +1,95 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Shrikhand&display=swap");
+@-webkit-keyframes apparition {
+  0% {
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes coeur {
+  from {
+    fill: white;
+  }
+  to {
+    fill: url(#MyGradient);
+  }
+}
+
+@keyframes coeur {
+  from {
+    fill: white;
+  }
+  to {
+    fill: url(#MyGradient);
+  }
+}
+
+@-webkit-keyframes rond {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rond {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fond {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fond {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /*général*/
 *, ::before, ::after {
   margin: 0;
@@ -56,6 +145,20 @@ footer .lien-footer {
 footer .lien-footer a {
   color: white;
   padding: 10px;
+}
+
+/*chargement*/
+#chargement {
+  width: 100px;
+  height: 100px;
+  border: 20px solid #99E2D0;
+  border-top: 20px solid #FF79DA;
+  border-radius: 50%;
+  -webkit-animation: rond 1s linear infinite;
+          animation: rond 1s linear infinite;
+  position: fixed;
+  margin: 500px 45vw;
+  z-index: 5;
 }
 
 /*page d'accueil*/
@@ -120,6 +223,10 @@ header > img, .logo > img {
   margin: 3rem auto;
 }
 
+.explorer:hover {
+  opacity: .8;
+}
+
 h2 {
   font-family: sans-serif;
   font-size: 25px;
@@ -159,13 +266,14 @@ h2 {
 
 .item .liste {
   background-color: #9356DC;
-  border-radius: 100%;
+  border-radius: 50%;
   color: white;
   font-size: 15px;
   font-weight: bold;
-  padding: 10px;
+  padding: 9px;
   display: inline-block;
   width: 2rem;
+  height: 2rem;
   position: absolute;
   left: -15px;
 }
@@ -263,6 +371,178 @@ h2 {
   margin-left: 15px;
 }
 
+/*les autres pages*/
+header a {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.commander {
+  display: block;
+  font-size: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  border: 0 none;
+  padding: 15px;
+  margin: 0 auto;
+  color: white;
+  font-weight: bold;
+  color: white;
+  font-weight: bold;
+  margin: 0  auto;
+  margin-top: 50px;
+  width: 40vw;
+  border-radius: 30px;
+  height: 3.5em;
+}
+
+.commander:hover {
+  opacity: .8;
+}
+
+.image-principale {
+  height: 30rem;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+
+.carte-principale {
+  position: relative;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #f1eeee;
+  border-radius: 30px 30px 0 0;
+  padding-bottom: 70px;
+  padding-right: 20px;
+  margin: -30px 0 0 0;
+  z-index: 2;
+}
+
+.plat {
+  display: inline-block;
+  height: 5rem;
+  margin: 20px auto;
+  margin-left: 5vw;
+  width: 90vw;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  position: relative;
+}
+
+h4, .prix {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+h4, p {
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prix {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+
+.coche .fa-check-circle {
+  visibility: hidden;
+}
+
+.categorie {
+  display: table;
+  margin-left: 20px;
+  position: relative;
+  padding-bottom: 8px;
+  width: 100px;
+}
+
+.categorie:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 50%;
+  height: 4px;
+  border-bottom: 5px solid #99E2D0;
+}
+
+.titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.titre h2 {
+  font-family: shrikhand;
+  margin: 30px;
+  font-size: 30px;
+}
+
+/*animation coeur*/
+.favoris {
+  position: relative;
+  margin-top: 30px;
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+.favoris svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white;
+  stroke: black;
+  stroke-width: 3px;
+}
+
+.favoris svg:hover {
+  -webkit-animation: coeur 4s 5ms;
+          animation: coeur 4s 5ms;
+}
+
+/* case check*/
+.plat:hover .prix {
+  position: absolute;
+  right: 80px;
+}
+
+.plat:hover .coche {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #99E2D0;
+  width: 70px;
+  height: 5rem;
+  border-radius: 0 20px 20px 0;
+}
+
+.plat:hover .fa-check-circle {
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  visibility: visible;
+}
+
+/*le responsive*/
 @media screen and (min-width: 700px) {
   .cartes {
     display: -ms-grid;
@@ -350,159 +630,18 @@ h2 {
   }
 }
 
-/*les autres pages*/
-header a {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.commander {
-  display: block;
-  font-size: 15px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 30px;
-  border: 0 none;
-  padding: 15px;
-  margin: 0 auto;
-  color: white;
-  font-weight: bold;
-  color: white;
-  font-weight: bold;
-  margin: 0  auto;
-  margin-top: 50px;
-  width: 40vw;
-  border-radius: 30px;
-  height: 3.5em;
-}
-
-.image-principale {
-  height: 30rem;
-  width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 1;
-}
-
-.carte-principale {
-  position: relative;
-  width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: #f1eeee;
-  border-radius: 30px 30px 0 0;
-  padding-bottom: 70px;
-  padding-right: 20px;
-  margin: -30px 0 0 0;
-  z-index: 2;
+/*animation*/
+.carte-entree .carte-plat .carte-dessert {
+  -webkit-animation: apparition 1.5s;
+          animation: apparition 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .plat {
-  display: inline-block;
-  height: 5rem;
-  margin: 20px auto;
-  margin-left: 5vw;
-  width: 90vw;
-  background-color: white;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  position: relative;
-}
-
-h4, .prix {
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-h4, p {
-  width: 70%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.prix {
-  position: absolute;
-  right: 20px;
-  top: 40px;
-}
-
-.coche .fa-check-circle {
-  visibility: hidden;
-}
-
-.categorie {
-  display: inline-block;
-  border-bottom: 4px solid #99E2D0;
-  margin-left: 20px;
-  padding-bottom: 8px;
-  width: 100px;
-}
-
-.titre {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.titre h2 {
-  font-family: shrikhand;
-  margin: 30px;
-  font-size: 30px;
-}
-
-/*animation coeur*/
-.favoris {
-  position: relative;
-  margin-top: 30px;
-  margin-right: 15px;
-  width: 30px;
-  height: 30px;
-}
-
-.favoris svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  fill: white;
-  stroke: black;
-  stroke-width: 3px;
-}
-
-.favoris svg:hover {
-  fill: url(#MyGradient);
-}
-
-/* case check*/
-.plat:hover .prix {
-  position: absolute;
-  right: 80px;
-}
-
-.plat:hover .coche {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #99E2D0;
-  width: 70px;
-  height: 5rem;
-  border-radius: 0 20px 20px 0;
-}
-
-.plat:hover .fa-check-circle {
-  display: inline-block;
-  color: white;
-  font-size: 30px;
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  visibility: visible;
+  -webkit-animation: apparition 3s;
+          animation: apparition 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 /*# sourceMappingURL=style.css.map */
