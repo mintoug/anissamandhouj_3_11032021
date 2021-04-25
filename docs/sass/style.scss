@@ -50,12 +50,12 @@ $font-family-logo:shrikhand;
 @keyframes fond{
     0%{
       opacity: 1;
+      z-index: 10;
     }
-    50%{
-       opacity: .5;
-    }
+    
     100%{
         opacity: 0;
+        z-index:-10;
     }
 }
  
@@ -104,17 +104,25 @@ footer{
      }
 }
 /*chargement*/
+.conten-chargement{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation:fond 4s forwards;
+    
+}
 #chargement{
         width: 100px;
         height: 100px;
         border: 20px solid $couleur-tertiaire;
         border-top: 20px solid $couleur-secondaire;
         border-radius: 50%;
-        animation: rond 1s linear infinite;
-        position: fixed;
-        margin: 500px 45vw;
-        z-index: 5;
-      
+        animation: rond 2s linear infinite;
+        position: relative;
+        left: 38vw;
+        top: 50%;
+        z-index: 5;      
 }
 /*page d'accueil*/
 header{
@@ -244,6 +252,7 @@ h2{
     width: max-content;
     padding: 5px;
     color: rgb(8, 141, 8);
+    border-radius: 2px;
     font-weight: bold;
     position: absolute;
     top:15px;
@@ -447,9 +456,11 @@ h2{
        margin-bottom: 50px;
        }
    }
+   .choix{
+       display: flex;
+   }
     .item{
-        max-width: 50vw;
-        margin: 50px auto;
+        width: 28vw;
    }
    .plat{
        display: inline-block;
