@@ -26,24 +26,6 @@
   }
 }
 
-@-webkit-keyframes coeur {
-  from {
-    fill: white;
-  }
-  to {
-    fill: url(#MyGradient);
-  }
-}
-
-@keyframes coeur {
-  from {
-    fill: white;
-  }
-  to {
-    fill: url(#MyGradient);
-  }
-}
-
 @-webkit-keyframes rond {
   0% {
     -webkit-transform: rotate(0deg);
@@ -513,11 +495,11 @@ h4, p {
 }
 
 .favoris svg:hover {
-  -webkit-animation: coeur 4s 5ms;
-          animation: coeur 4s 5ms;
+  cursor: pointer;
+  fill: url(#MyGradient);
 }
 
-/* case check*/
+/* case choix*/
 .plat:hover .prix {
   position: absolute;
   right: 80px;

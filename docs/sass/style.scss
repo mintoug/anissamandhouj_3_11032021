@@ -42,14 +42,7 @@ $font-family-logo:shrikhand;
         transform: scale(1);  
     }    
 }
-@keyframes coeur {
-    from{
-      fill:white
-    }
-    to{
-        fill:url(#MyGradient);
-    }
-}
+
 @keyframes rond {
     0% { transform: rotate(0deg);}
     100% { transform: rotate(360deg);}
@@ -380,11 +373,13 @@ h2{
     stroke-width: 3px;
    }
     svg:hover{
-        
-      animation:coeur 4s 5ms;
+       cursor: pointer;
+       fill:url(#MyGradient);
      }
 }
-/* case check*/
+
+
+/* case choix*/
 .plat{
     &:hover{
         .prix{
