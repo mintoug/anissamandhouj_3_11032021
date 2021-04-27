@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Shrikhand&display=swap');
 
 $couleur-primaire:#9356DC;
@@ -99,6 +100,7 @@ footer{
     height: fit-content;
     position: relative;
     margin-top: -2rem;
+    font-size: 16px;
     h3{
         font-family: $font-family-logo;
         font-weight: 500;
@@ -260,7 +262,7 @@ h2{
 }
 .carte{
     max-width: 170em;
-    height: 280px;
+    height: 290px;
     border-radius: 20px;
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -269,13 +271,15 @@ h2{
     width: 90%;
          img{
          width: 100%;
-         height: 200px;
+         height: 210px;
          object-fit: cover;
          border-radius: 20px 20px 0 0;
          }
          .commentaire{
-             padding: 10px ;
-             font-size: 15px;
+             padding-top: 5px;
+             p{
+                 font-size: 21px;
+             }
          }
 }        
 .nouveau{
@@ -317,12 +321,12 @@ h2{
     font-weight: bold;
     margin:0  auto;
     margin-top: 50px;
-    width: 40vw;
+    width: 50vw;
     border-radius: 30px;
-    height: 3.5em;
+    height: 3.8em;
 }
 .image-principale{
-   height: 30rem;
+   height: 17rem;
     width: 100vw;
     object-fit:cover; 
     z-index: 1;
@@ -340,7 +344,7 @@ h2{
 }
 .plat{
     display: inline-block;
-    height: 5rem;
+    height: 4.5rem;
     margin: 20px auto;
     margin-left: 5vw;
     width: 90vw;
@@ -358,11 +362,11 @@ h2{
          font-weight: bold;
       }
      h4 , p{
-         width:70%;
+         width: 80%;
          overflow: hidden;
          text-overflow:ellipsis;
          white-space: nowrap;
-     } 
+         } 
         .prix{
           position:absolute;
           right:20px;
@@ -414,7 +418,7 @@ h2{
 /*animation coeur*/
 .favoris {
      position: relative;
-   margin-top: 30px;
+   margin-top:15px;
    margin-right: 15px;
    width: 30px;
    height: 30px;
@@ -441,13 +445,16 @@ h2{
       position: absolute;
       right: 80px;
         }
+        p ,h4{
+            width: 60%;
+        }
         .coche{
           position: absolute;
           top: 0;
           right: 0;
           background: $couleur-tertiaire;
           width: 70px;
-          height: 5rem;
+          height: 4.5rem;
           border-radius: 0 20px 20px 0;
         }
         .fa-check-circle{
@@ -527,9 +534,6 @@ h2{
                width: 24vw;
            }
        }
-       .prix{
-           padding-top: 15px;
-       }
    }
    .categorie{
        position: relative;
@@ -538,6 +542,9 @@ h2{
    .carte-principale{
        max-width: 90vw;
        left: 5vw;
+   }
+   .prix{
+       padding-top: 15px;
    }
 }
 
