@@ -1,6 +1,31 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Shrikhand&display=swap");
+@-webkit-keyframes arrive {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes arrive {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes apparition {
   0% {
     -webkit-transform: scale(0);
@@ -13,6 +38,7 @@
             transform: scale(1);
   }
 }
+
 @keyframes apparition {
   0% {
     -webkit-transform: scale(0);
@@ -79,7 +105,7 @@
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif, sans-serif;
   font-size: 20px;
 }
 
@@ -162,8 +188,8 @@ header {
   content: "";
   display: block;
   width: 100%;
-  -webkit-box-shadow: 0 2px 5px 2px black;
-          box-shadow: 0 2px 5px 2px black;
+  -webkit-box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 header > img, .logo > img {
@@ -219,6 +245,7 @@ header > img, .logo > img {
   padding: 15px;
   margin: 0 auto;
   color: white;
+  cursor: pointer;
   height: 3.5rem;
   width: 60%;
   padding: 15px;
@@ -402,6 +429,7 @@ header a {
   padding: 15px;
   margin: 0 auto;
   color: white;
+  cursor: pointer;
   color: white;
   font-weight: bold;
   margin: 0  auto;
@@ -470,7 +498,7 @@ h4, p {
 .prix {
   position: absolute;
   right: 20px;
-  top: 40px;
+  top: 35px;
 }
 
 .coche .fa-check-circle {
@@ -508,6 +536,25 @@ h4, p {
   font-family: shrikhand;
   margin: 30px;
   font-size: 30px;
+}
+
+/*animation apprition des cartes*/
+.carte-entree {
+  opacity: 0;
+  -webkit-animation: arrive 1s .1s forwards;
+          animation: arrive 1s .1s forwards;
+}
+
+.carte-plat {
+  opacity: 0;
+  -webkit-animation: arrive 1s .5s forwards;
+          animation: arrive 1s .5s forwards;
+}
+
+.carte-dessert {
+  opacity: 0;
+  -webkit-animation: arrive 1s 1s forwards;
+          animation: arrive 1s 1s forwards;
 }
 
 /*animation coeur*/
@@ -602,6 +649,9 @@ h4, p {
 }
 
 @media screen and (min-width: 900px) {
+  body {
+    font-size: 15px;
+  }
   .explorer {
     width: 25vw;
   }
@@ -646,6 +696,9 @@ h4, p {
   .toutes-cartes .carte-dessert a {
     width: 24vw;
   }
+  .toutes-cartes .prix {
+    padding-top: 15px;
+  }
   .categorie {
     position: relative;
     right: -10vw;
@@ -654,20 +707,5 @@ h4, p {
     max-width: 90vw;
     left: 5vw;
   }
-}
-
-/*animation*/
-.carte-entree .carte-plat .carte-dessert {
-  -webkit-animation: apparition 1.5s;
-          animation: apparition 1.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
-.plat {
-  -webkit-animation: apparition 3s;
-          animation: apparition 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
 }
 /*# sourceMappingURL=style.css.map */
