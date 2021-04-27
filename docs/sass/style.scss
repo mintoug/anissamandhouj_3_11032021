@@ -126,14 +126,14 @@ footer{
     
 }
 #chargement{
-        width: 100px;
-        height: 100px;
+        width: 20vw;
+        height: 20vw;
         border: 20px solid $couleur-tertiaire;
         border-top: 20px solid $couleur-secondaire;
         border-radius: 50%;
         animation: rond 2s linear infinite;
-        position: relative;
-        left: 38vw;
+        position: fixed;
+        left: 40vw;
         top: 50%;
         z-index: 5;      
 }

@@ -166,15 +166,15 @@ footer .lien-footer a {
 }
 
 #chargement {
-  width: 100px;
-  height: 100px;
+  width: 20vw;
+  height: 20vw;
   border: 20px solid #99E2D0;
   border-top: 20px solid #FF79DA;
   border-radius: 50%;
   -webkit-animation: rond 2s linear infinite;
           animation: rond 2s linear infinite;
-  position: relative;
-  left: 38vw;
+  position: fixed;
+  left: 40vw;
   top: 50%;
   z-index: 5;
 }
