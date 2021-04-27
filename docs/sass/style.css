@@ -239,7 +239,7 @@ header > img, .logo > img {
 .explorer {
   display: block;
   font-size: 15px;
-  background: linear-gradient(145deg, #FF79DA, #9356DC);
+  background: linear-gradient(165deg, #FF79DA, #9356DC);
   border-radius: 30px;
   -webkit-box-shadow: 0 3px 4px 3px #d8d7d7;
           box-shadow: 0 3px 4px 3px #d8d7d7;
@@ -266,6 +266,7 @@ h2 {
 
 .fa-mobile-alt, .fa-list-ul, .fa-store {
   color: gray;
+  margin-left: 5px;
 }
 
 .item {
@@ -426,7 +427,7 @@ header a {
 .commander {
   display: block;
   font-size: 15px;
-  background: linear-gradient(145deg, #FF79DA, #9356DC);
+  background: linear-gradient(165deg, #FF79DA, #9356DC);
   border-radius: 30px;
   -webkit-box-shadow: 0 3px 4px 3px #d8d7d7;
           box-shadow: 0 3px 4px 3px #d8d7d7;
@@ -578,12 +579,13 @@ h4, p {
   height: 100%;
   fill: white;
   stroke: black;
-  stroke-width: 3px;
+  stroke-width: 20px;
 }
 
 .favoris svg:hover {
   cursor: pointer;
   fill: url(#MyGradient);
+  stroke-width: 1px;
 }
 
 /* case choix*/
@@ -714,7 +716,7 @@ h4, p {
     left: 5vw;
   }
   .prix {
-    padding-top: 15px;
+    margin-left: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -14,7 +14,7 @@ $font-family-logo:shrikhand;
 @mixin bouton{
     display: block;
     font-size: 15px;
-    background:linear-gradient(145deg, $couleur-secondaire, $couleur-primaire);
+    background:linear-gradient(165deg, $couleur-secondaire, $couleur-primaire);
     border-radius:30px;
     box-shadow: 0 3px 4px 3px $fond-2;
     border: 0 none;
@@ -193,6 +193,7 @@ h2{
 }
 .fa-mobile-alt, .fa-list-ul, .fa-store{
     color: gray;
+    margin-left: 5px;
 }
 .item{
     @include centrer;
@@ -283,7 +284,7 @@ h2{
          }
 }        
 .nouveau{
-    background-color: #99E2D0;
+    background-color: $couleur-tertiaire;
     width: max-content;
     padding: 5px;
     color: rgb(8, 141, 8);
@@ -429,11 +430,13 @@ h2{
     height: 100%;
      fill:white;
     stroke: black;
-    stroke-width: 3px;
+    stroke-width: 20px;
+    
    }
     svg:hover{
        cursor: pointer;
        fill:url(#MyGradient);
+       stroke-width: 1px;
      }
 }
 
@@ -544,7 +547,7 @@ h2{
        left: 5vw;
    }
    .prix{
-       padding-top: 15px;
+       margin-left: 10px;
    }
 }
 
