@@ -2,74 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Shrikhand&display=swap');
 
-$couleur-primaire:#9356DC;
-$couleur-secondaire:#FF79DA;
-$couleur-tertiaire:#99E2D0;
-$fond-1:rgb(241, 238, 238);
-$fond-2:rgb(216, 215, 215);
-$font-family-1:Roboto,sans-serif;
-$font-family-2:sans-serif;
-$font-family-logo:shrikhand;
+@import 'variables';
+@import 'mixins';
+@import 'fonctions';
+@import 'animations';
 
-@mixin bouton{
-    display: block;
-    font-size: 15px;
-    background:linear-gradient(165deg, $couleur-secondaire, $couleur-primaire);
-    border-radius:30px;
-    box-shadow: 0 3px 4px 3px $fond-2;
-    border: 0 none;
-    padding:15px;
-    margin: 0 auto;
-    color: white;
-    cursor: pointer; 
-    &:hover{
-        opacity: .8;
-    }
-        
-}
-@mixin centrer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@function tint($color, $percentage) {
-    @return mix(white, $color, $percentage);
-  }
-  @keyframes arrive {
-      from{
-          opacity:0;
-          transform: translateY(-15px);
-          transform-origin: left bottom;
-      }
-      to{
-          opacity: 1;
-      }
-  }
-  @keyframes apparition {
-    0%{
-        transform:scale(0);
-        transform-origin: bottom 0;
-    }
-    100%{
-        transform: scale(1);  
-    }    
-}
 
-@keyframes rond {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
-}
-@keyframes fond{
-    0%{
-      opacity: 1;
-      z-index: 10;
-    }
-    
-    100%{
-        opacity: 0;
-        z-index:-10;
-    }
-}
+ 
  
 /*général*/
 *,::before,::after{

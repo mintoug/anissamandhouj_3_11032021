@@ -1,0 +1,21 @@
+@mixin bouton{
+    display: block;
+    font-size: 15px;
+    background:linear-gradient(165deg, $couleur-secondaire, $couleur-primaire);
+    border-radius:30px;
+    box-shadow: 0 3px 4px 3px $fond-2;
+    border: 0 none;
+    padding:15px;
+    margin: 0 auto;
+    color: white;
+    cursor: pointer; 
+    &:hover{
+        opacity: .8;
+    }
+        
+}
+@mixin centrer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
