@@ -161,8 +161,8 @@ footer .lien-footer a {
   width: 100%;
   height: 100%;
   background-color: white;
-  -webkit-animation: fond 4s forwards;
-          animation: fond 4s forwards;
+  -webkit-animation: fond 3s forwards;
+          animation: fond 3s forwards;
 }
 
 #chargement {
@@ -170,6 +170,7 @@ footer .lien-footer a {
   height: 20vw;
   border: 20px solid #99E2D0;
   border-top: 20px solid #FF79DA;
+  border-bottom: 20px solid #9356DC;
   border-radius: 50%;
   -webkit-animation: rond 2s linear infinite;
           animation: rond 2s linear infinite;
@@ -286,7 +287,7 @@ h2 {
 }
 
 .item {
-  width: 90vw;
+  width: 80vw;
   height: 5rem;
   margin: 2rem auto;
   border-radius: 25px;
@@ -294,6 +295,7 @@ h2 {
           box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1);
   background-color: #f1eeee;
   position: relative;
+  cursor: pointer;
 }
 
 .item .liste {
@@ -356,7 +358,7 @@ h2 {
 }
 
 .carte {
-  max-width: 170em;
+  width: 17em;
   height: 290px;
   border-radius: 20px;
   -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
@@ -417,7 +419,7 @@ h2 {
   margin-left: 15px;
 }
 
-/*les autres pages*/
+/*les autres pages- style commun*/
 header a {
   position: absolute;
   top: 30px;
@@ -588,7 +590,7 @@ h4, p {
   stroke-width: 1px;
 }
 
-/* case choix*/
+/*animation case choix*/
 .plat:hover .prix {
   position: absolute;
   right: 80px;
