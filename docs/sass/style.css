@@ -169,26 +169,85 @@ footer .lien-footer a {
   padding: 10px;
 }
 
-/*général*/
-*, ::before, ::after {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+/*animation apprition des cartes*/
+.carte-entree {
+  opacity: 0;
+  -webkit-animation: arrive 1s .1s forwards;
+          animation: arrive 1s .1s forwards;
 }
 
-body {
-  font-family: Roboto, sans-serif, sans-serif;
-  font-size: 20px;
+.carte-plat {
+  opacity: 0;
+  -webkit-animation: arrive 1s .5s forwards;
+          animation: arrive 1s .5s forwards;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.carte-dessert {
+  opacity: 0;
+  -webkit-animation: arrive 1s 1s forwards;
+          animation: arrive 1s 1s forwards;
+}
+
+/*animation coeur*/
+.favoris {
+  position: relative;
+  margin-top: 30px;
+  margin-right: 18px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
-/*chargement (loader)*/
+.favoris svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white;
+  stroke: black;
+  stroke-width: 20px;
+}
+
+.favoris svg:hover {
+  cursor: pointer;
+  fill: url(#MyGradient);
+  stroke-width: 1px;
+}
+
+/*animation case choix*/
+.plat:hover .prix {
+  position: absolute;
+  right: 80px;
+}
+
+.plat:hover p, .plat:hover h4 {
+  width: 60%;
+}
+
+.plat:hover .coche {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #99E2D0;
+  width: 70px;
+  height: 4.5rem;
+  border-radius: 0 20px 20px 0;
+  -webkit-animation: check .5s forwards;
+          animation: check .5s forwards;
+}
+
+.plat:hover .fa-check-circle {
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  visibility: visible;
+  -webkit-animation: rotation 0.5s forwards;
+          animation: rotation 0.5s forwards;
+}
+
+/*chargement + animation (loader)*/
 .conten-chargement {
   position: fixed;
   width: 100%;
@@ -211,6 +270,25 @@ a {
   left: 40vw;
   top: 50%;
   z-index: 5;
+}
+
+/*général*/
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif, sans-serif;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 /*page d'accueil*/
@@ -560,81 +638,105 @@ h4, p {
   margin-right: 10px;
 }
 
-/*animation apprition des cartes*/
-.carte-entree {
-  opacity: 0;
-  -webkit-animation: arrive 1s .1s forwards;
-          animation: arrive 1s .1s forwards;
+/*le responsive*/
+@media screen and (min-width: 700px) {
+  .cartes {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    gap: 30px;
+  }
+  .cartes .carte-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+  }
+  .cartes .carte-2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1/2/2/3;
+  }
+  .cartes .carte-3 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/3/2;
+  }
+  .cartes .carte-4 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 2/2/3/3;
+  }
 }
 
-.carte-plat {
-  opacity: 0;
-  -webkit-animation: arrive 1s .5s forwards;
-          animation: arrive 1s .5s forwards;
-}
-
-.carte-dessert {
-  opacity: 0;
-  -webkit-animation: arrive 1s 1s forwards;
-          animation: arrive 1s 1s forwards;
-}
-
-/*animation coeur*/
-.favoris {
-  position: relative;
-  margin-top: 30px;
-  margin-right: 18px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.favoris svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  fill: white;
-  stroke: black;
-  stroke-width: 20px;
-}
-
-.favoris svg:hover {
-  cursor: pointer;
-  fill: url(#MyGradient);
-  stroke-width: 1px;
-}
-
-/*animation case choix*/
-.plat:hover .prix {
-  position: absolute;
-  right: 80px;
-}
-
-.plat:hover p, .plat:hover h4 {
-  width: 60%;
-}
-
-.plat:hover .coche {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #99E2D0;
-  width: 70px;
-  height: 4.5rem;
-  border-radius: 0 20px 20px 0;
-  -webkit-animation: check .5s forwards;
-          animation: check .5s forwards;
-}
-
-.plat:hover .fa-check-circle {
-  display: inline-block;
-  color: white;
-  font-size: 30px;
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  visibility: visible;
-  -webkit-animation: rotation 0.5s forwards;
-          animation: rotation 0.5s forwards;
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 15px;
+  }
+  .explorer {
+    width: 25vw;
+  }
+  .commander {
+    width: 20vw;
+  }
+  header > img, .logo > img {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  footer .lien-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer h3 {
+    margin-bottom: 50px;
+  }
+  .choix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .item {
+    width: 28vw;
+  }
+  .plat {
+    display: inline-block;
+    max-width: 25vw;
+    font-size: 16px;
+  }
+  .toutes-cartes {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .toutes-cartes .carte-dessert a {
+    width: 24vw;
+  }
+  .categorie {
+    position: relative;
+    right: -10vw;
+  }
+  .carte-principale {
+    max-width: 90vw;
+    left: 5vw;
+  }
+  .prix {
+    margin-left: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
