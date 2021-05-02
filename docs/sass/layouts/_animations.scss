@@ -1,0 +1,93 @@
+/*animation apprition des cartes*/
+.carte-entree{
+    opacity: 0;
+    animation: arrive 1s .1s forwards;
+}
+.carte-plat{
+    opacity: 0;
+    animation: arrive 1s .5s forwards;
+}
+.carte-dessert{
+    opacity: 0;
+    animation: arrive 1s 1s forwards;
+}
+/*animation coeur*/
+.favoris {
+   position: relative;
+   margin-top:30px;
+   margin-right: 18px;
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+     svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     fill:white;
+    stroke: black;
+    stroke-width: 20px;
+    
+   }
+    svg:hover{
+       cursor: pointer;
+       fill:url(#MyGradient);
+       stroke-width: 1px;
+     }
+}
+
+
+/*animation case choix*/
+.plat{
+    &:hover{
+        .prix{
+      position: absolute;
+      right: 80px;
+        }
+        p ,h4{
+            width: 60%;
+        }
+        .coche{
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: $couleur-tertiaire;
+          width: 70px;
+          height: 4.5rem;
+          border-radius: 0 20px 20px 0;
+         animation: check .5s forwards;
+        }
+        .fa-check-circle{
+          display: inline-block;
+          color:white;
+          font-size: 30px;
+          position: absolute;
+          top:25px;
+          right:25px;
+         visibility: visible;
+         animation: rotation 0.5s forwards;
+          
+          } 
+    }
+}
+/*chargement + animation (loader)*/
+.conten-chargement{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation:fond 3s forwards;
+    
+}
+#chargement{
+        width: 20vw;
+        height: 20vw;
+        border: 20px solid $couleur-tertiaire;
+        border-top: 20px solid $couleur-secondaire;
+        border-bottom:20px solid $couleur-primaire;
+        border-radius: 50%;
+        animation: rond 2s linear infinite;
+        position: fixed;
+        left: 40vw;
+        top: 50%;
+        z-index: 5;      
+}

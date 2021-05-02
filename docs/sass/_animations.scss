@@ -8,15 +8,6 @@
         opacity: 1;
     }
 }
-@keyframes apparition {
-  0%{
-      transform:scale(0);
-      transform-origin: bottom 0;
-  }
-  100%{
-      transform: scale(1);  
-  }    
-}
 
 @keyframes rond {
   0% { transform: rotate(0deg);}
@@ -31,5 +22,22 @@
   100%{
       opacity: 0;
       z-index:-10;
+  }
+}
+@keyframes check {
+  from{
+    width: 0;
+  }
+  to{
+    width: 70px;
+  }
+  
+}
+@keyframes rotation {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
   }
 }
