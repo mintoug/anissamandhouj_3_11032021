@@ -141,13 +141,12 @@ footer {
   color: white;
   background-color: #333333;
   padding: 30px 10px;
-  padding-bottom: 80px;
-  bottom: -35px;
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
+  bottom: -35px;
   margin-top: -2rem;
   font-size: 16px;
 }
@@ -253,8 +252,8 @@ footer .lien-footer a {
   width: 100%;
   height: 100%;
   background-color: white;
-  -webkit-animation: fond 3s forwards;
-          animation: fond 3s forwards;
+  -webkit-animation: fond .5s forwards;
+          animation: fond .5s forwards;
 }
 
 #chargement {
