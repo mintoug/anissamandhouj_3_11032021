@@ -610,7 +610,7 @@ h4, p {
   width: 100px;
 }
 
-.categorie:after {
+.categorie::after {
   content: "";
   position: absolute;
   bottom: 0;
